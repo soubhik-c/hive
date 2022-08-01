@@ -84,38 +84,32 @@ a                   	string
 b                   	float               	                    
 	 	 
 #### A masked pattern was here ####
-PREHOOK: query: DESCRIBE FORMATTED test
+PREHOOK: query: DESCRIBE FORMATTED test a
 PREHOOK: type: DESCTABLE
 PREHOOK: Input: default@test
-POSTHOOK: query: DESCRIBE FORMATTED test
+POSTHOOK: query: DESCRIBE FORMATTED test a
 POSTHOOK: type: DESCTABLE
 POSTHOOK: Input: default@test
-# col_name            	data_type           	comment             
-a                   	string              	                    
-b                   	float               	                    
-	 	 
-# Detailed Table Information	 	 
-Database:           	default             	 
-#### A masked pattern was here ####
-Retention:          	0                   	 
-#### A masked pattern was here ####
-Table Type:         	MANAGED_TABLE       	 
-Table Parameters:	 	 
-	COLUMN_STATS_ACCURATE	{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"a\":\"true\",\"b\":\"true\"}}
-	bucketing_version   	2                   
-	numFiles            	5                   
-	numRows             	5                   
-	rawDataSize         	24                  
-	totalSize           	29                  
-#### A masked pattern was here ####
-	 	 
-# Storage Information	 	 
-SerDe Library:      	org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe	 
-InputFormat:        	org.apache.hadoop.mapred.TextInputFormat	 
-OutputFormat:       	org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat	 
-Compressed:         	No                  	 
-Num Buckets:        	-1                  	 
-Bucket Columns:     	[]                  	 
-Sort Columns:       	[]                  	 
-Storage Desc Params:	 	 
-	serialization.format	1                   
+col_name            	a                   
+data_type           	string              
+min                 	                    
+max                 	                    
+num_nulls           	0                   
+distinct_count      	5                   
+avg_col_len         	1.0                 
+max_col_len         	1                   
+num_trues           	                    
+num_falses          	                    
+bit_vector          	HL                  
+freq_items          	FrequentItemsSketch<T>:
+                    	  Stream Length    : 5
+                    	  Max Error Offset : 0
+                    	ReversePurgeItemHashMap
+                    	         Index:     States      Values Keys
+                    	             0:          2           1 a
+                    	             2:          1           1 d
+                    	             4:          1           1 b
+                    	             5:          2           1 e
+                    	             7:          1           1 c
+comment             	from deserializer   
+COLUMN_STATS_ACCURATE	{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"a\":\"true\",\"b\":\"true\"}}
