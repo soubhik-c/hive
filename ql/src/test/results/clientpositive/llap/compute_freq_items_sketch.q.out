@@ -199,9 +199,9 @@ freq_items          	FrequentItemsSketch<T>:
                     	                  Item          Est
                     	                       c            7
                     	                       b            3
-                    	                       a            1
                     	                       e            1
                     	                       d            1
+                    	                       a            1
                     	  abcdefghijklmno..12345            1
 comment             	from deserializer   
 COLUMN_STATS_ACCURATE	{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"a\":\"true\",\"b\":\"true\"}}
